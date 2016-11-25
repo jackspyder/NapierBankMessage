@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Newtonsoft.Json;
+
 
 namespace NapierBankMessage
 {
@@ -23,6 +25,36 @@ namespace NapierBankMessage
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void listbox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+        }
+
+        private void TabControl_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+        }
+
+        public void btnSubmit_Click(object sender, RoutedEventArgs e)
+        {
+            string input = new TextRange(inBody.Document.ContentStart, inBody.Document.ContentEnd).Text;
+
+            MessageBox.Show(input);
+            if (input.Substring(0, 1) == "E")
+            {
+                
+                ParseEmail.parseEmail(input);
+            }
+            else if (input.Substring(0, 1) == "S")
+            {
+                ParseSMS.parseSMS(input);
+            }
+            else if (input.Substring(0, 1) == "T")
+            {
+                ParseTweet.parseTweet(input);
+            }
+            else
+                MessageBox.Show("Could not determine message type, please try again.");
         }
     }
 }
