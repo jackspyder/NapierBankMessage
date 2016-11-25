@@ -11,10 +11,6 @@ namespace NapierBankMessage
 {
     class Email: Message
     {
-        private string _subject;
-        private string _sort;
-        private string _incident;
-        
         public string Subject { get; set; }
 
         public string Sort { get; set; }
