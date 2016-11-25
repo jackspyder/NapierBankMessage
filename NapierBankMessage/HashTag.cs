@@ -22,10 +22,9 @@ namespace NapierBankMessage
             {
                 tags.Add(m.Value);
             }
-            foreach (string t in tags)
-            {
-                MessageBox.Show(t);
-            }
+            
+               
+            
             
         }
     }

@@ -39,7 +39,8 @@ namespace NapierBankMessage
         {
             string input = new TextRange(inBody.Document.ContentStart, inBody.Document.ContentEnd).Text;
 
-            MessageBox.Show(input);
+           
+
             if (input.Substring(0, 1) == "E")
             {
                 
@@ -55,6 +56,8 @@ namespace NapierBankMessage
             }
             else
                 MessageBox.Show("Could not determine message type, please try again.");
+            MessageBox.Show("Message Submitted");
+            inBody.Document.Blocks.Clear();
         }
 
         private void btn_Click(object sender, RoutedEventArgs e)
