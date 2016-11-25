@@ -13,15 +13,15 @@ namespace NapierBankMessage
         {
             string fileName = "sms.json";
 
-            SMS sms = new SMS();
+            Tweet tweet = new Tweet();
 
             var lines = input.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
-            sms.Header = lines.First();
-            sms.Sender = lines.ElementAt(1);
-            sms.Body = lines.ElementAt(2);
+            tweet.Header = lines.First();
+            tweet.Sender = lines.ElementAt(1);
+            tweet.Body = lines.ElementAt(2);
 
-            Save.saveJson(sms, fileName);
+            Save.saveJson(tweet, fileName);
         }
     }
 }
