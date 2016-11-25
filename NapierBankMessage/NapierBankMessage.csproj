@@ -60,6 +60,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="MailExtractor.cs" />
     <Compile Include="ParseEmail.cs" />
     <Compile Include="ParseSMS.cs" />
     <Compile Include="ParseTweet.cs" />

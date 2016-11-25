@@ -23,18 +23,17 @@ namespace NapierBankMessage
                 email.Subject = lines.ElementAt(2);
                 email.Sort = lines.ElementAt(3).Substring(11);
                 email.Incident = lines.ElementAt(4).Substring(20);
-                email.Body = lines.ElementAt(5);
+                email.Body = MailExtractor.ExtractEmails(lines.ElementAt(5));
             }
             else
             {
                 email.Header = lines.First();
                 email.Sender = lines.ElementAt(1);
                 email.Subject = lines.ElementAt(2);
-                email.Body = lines.ElementAt(3);
+                email.Body = MailExtractor.ExtractEmails(lines.ElementAt(3));
             }
 
-
-
+            
             Save.saveJson(email, fileName);
         }
     }
