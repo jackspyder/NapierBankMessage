@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Security.Permissions;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,16 +8,13 @@ namespace NapierBankMessage
 {
     abstract class Message
     {
-        public String Header { get; set; }
-       
-        public String Sender { get; set; }
-        public String Body { get; set; }
+        private string _header;
+        private string _sender;
+        private string _body;
+        public string Header { get; set; }
 
+        public string Sender { get; set; }
 
-        public Message()
-        {
-            
-        }
-
+        public string Body { get; set; }
     }
 }

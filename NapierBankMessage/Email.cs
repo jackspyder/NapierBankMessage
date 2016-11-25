@@ -9,25 +9,17 @@ using System.Windows;
 
 namespace NapierBankMessage
 {
-    class Email
+    class Email: Message
     {
-        private string _header;
-        private string _sender;
         private string _subject;
         private string _sort;
         private string _incident;
-        private string _body;
-        public string Header { get; set; }
-
-        public string Sender { get; set; }
-
+        
         public string Subject { get; set; }
 
         public string Sort { get; set; }
 
         public string Incident { get; set; }
-
-        public string Body { get; set; }
         
         public Email()
         {

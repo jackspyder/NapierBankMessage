@@ -60,7 +60,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="HashTag.cs" />
     <Compile Include="MailExtractor.cs" />
+    <Compile Include="Message.cs" />
     <Compile Include="ParseEmail.cs" />
     <Compile Include="ParseSMS.cs" />
     <Compile Include="ParseTweet.cs" />
@@ -82,7 +84,6 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Message.cs" />
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>

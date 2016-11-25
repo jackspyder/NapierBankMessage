@@ -20,6 +20,8 @@ namespace NapierBankMessage
             tweet.Sender = lines.ElementAt(1);
             tweet.Body = lines.ElementAt(2);
 
+            HashTag.getHashTags(tweet.Body);
+
             Save.saveJson(tweet, fileName);
         }
     }
