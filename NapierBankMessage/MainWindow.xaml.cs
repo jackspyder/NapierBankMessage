@@ -56,5 +56,10 @@ namespace NapierBankMessage
             else
                 MessageBox.Show("Could not determine message type, please try again.");
         }
+
+        private void btn_Click(object sender, RoutedEventArgs e)
+        {
+            Reader.readJson("sms.json");
+        }
     }
 }

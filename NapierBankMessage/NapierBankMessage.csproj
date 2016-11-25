@@ -66,6 +66,7 @@
     <Compile Include="ParseEmail.cs" />
     <Compile Include="ParseSMS.cs" />
     <Compile Include="ParseTweet.cs" />
+    <Compile Include="Reader.cs" />
     <Compile Include="Save.cs" />
     <Compile Include="SMS.cs" />
     <Compile Include="Tweet.cs" />

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -11,12 +12,15 @@ namespace NapierBankMessage
     {
         public static void saveJson(object message, string fileName)
         {
-            String output = JsonConvert.SerializeObject(message, Formatting.Indented);
-
-            using (System.IO.StreamWriter file =
-            new System.IO.StreamWriter(fileName, true))
+            using (FileStream fs = File.Open(fileName, FileMode.Append))
+            using (StreamWriter sw = new StreamWriter(fs))
+            using (JsonWriter jw = new JsonTextWriter(sw))
             {
-                file.WriteLine(output);
+                jw.Formatting = Formatting.Indented;
+                
+                JsonSerializer serializer = new JsonSerializer();
+                
+                serializer.Serialize(jw, message);
             }
         }
     }

@@ -95,6 +95,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
                         <RowDefinition Height="Auto"/>
+                        <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
                     <Label Margin="5">Type</Label>
@@ -107,6 +108,7 @@
                     </ComboBox>
                     <Label Grid.Row="1" Margin="5">Amount</Label>
                     <TextBox Grid.Row="1" Grid.Column="1" Margin="5"/>
+                    <Button x:Name = "btn" Content = "View" Grid.Row ="3" Grid.Column="2" Margin="10" Click="btn_Click"/>
                 </Grid>
             </TabItem>
         </TabControl>
