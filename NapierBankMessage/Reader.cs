@@ -16,24 +16,21 @@ namespace NapierBankMessage
     {
         internal static string readFile(string fileName)
         {
-            string name = "h";
+            string j = "j";
             var array = JArray.Parse(File.ReadAllText(fileName));
-
-            //IList<> objectsList = new List<>();
-            JArray objectsList = new JArray();
 
             foreach (var item in array)
             {
-                
-                    // CorrectElements
-                    objectsList.Add(item);
-                    Console.WriteLine(item);
+                // CorrectElements
+
+                Console.WriteLine(item);
             }
+            //why not branching?
 
-            return objectsList;
+            return array.ToString(); //wrong request in main.
 
 
-            
+
         }
     }
 }
