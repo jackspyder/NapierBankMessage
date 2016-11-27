@@ -14,14 +14,26 @@ namespace NapierBankMessage
 {
     class Reader
     {
-        
-        internal static string readFile (string fileName)
+        internal static string readFile(string fileName)
         {
-            string text = System.IO.File.ReadAllText(@fileName);
+            string name = "h";
+            var array = JArray.Parse(File.ReadAllText(fileName));
+
+            //IList<> objectsList = new List<>();
+            JArray objectsList = new JArray();
+
+            foreach (var item in array)
+            {
+                
+                    // CorrectElements
+                    objectsList.Add(item);
+                    Console.WriteLine(item);
+            }
+
+            return objectsList;
+
 
             
-            return text;
-
         }
     }
 }

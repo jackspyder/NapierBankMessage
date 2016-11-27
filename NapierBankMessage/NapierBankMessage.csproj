@@ -60,6 +60,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="DataContractJsonSerializer.cs" />
     <Compile Include="HashTag.cs" />
     <Compile Include="MailExtractor.cs" />
     <Compile Include="Message.cs" />

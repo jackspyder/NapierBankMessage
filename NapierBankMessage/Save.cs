@@ -4,24 +4,36 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Windows.Documents;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 namespace NapierBankMessage
 {
     class Save
     {
-        public static void saveJson(object message, string fileName)
+        public static void saveJson(object incoming, string fileName)
         {
-            using (FileStream fs = File.Open(fileName, FileMode.Append))
-            using (StreamWriter sw = new StreamWriter(fs))
-            using (JsonWriter jw = new JsonTextWriter(sw))
+            var list = new List<object>();
+
+            
+                list = JsonConvert.DeserializeObject<List<object>>(File.ReadAllText(fileName));
+                list.Add(incoming);
+           
+
+
+
+            //var jsonToOutput = JsonConvert.SerializeObject(array, Formatting.Indented);
+
+            using (StreamWriter writer = File.CreateText(fileName))
             {
-                jw.Formatting = Formatting.Indented;
-                
                 JsonSerializer serializer = new JsonSerializer();
-                
-                serializer.Serialize(jw, message);
+                serializer.Formatting = Formatting.Indented;
+                serializer.Serialize(writer, list);
             }
+
+
         }
+
     }
 }
