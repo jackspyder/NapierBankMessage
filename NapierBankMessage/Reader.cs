@@ -25,6 +25,7 @@ namespace NapierBankMessage
                     
                     Console.WriteLine(item);
             }
+            //why not branching?
 
             return array.ToString(); //wrong request in main.
 
