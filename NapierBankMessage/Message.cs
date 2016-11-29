@@ -8,7 +8,6 @@ namespace NapierBankMessage
 {
     abstract class Message
     {
-        
         public string Header { get; set; }
 
         public string Sender { get; set; }

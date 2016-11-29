@@ -17,12 +17,10 @@ namespace NapierBankMessage
         
         internal static string readFile (string fileName)
         {
-            //read in a json file for display
             string text = System.IO.File.ReadAllText(@fileName);
 
-            
-            return text;
 
+            
         }
     }
 }

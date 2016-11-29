@@ -62,7 +62,7 @@ namespace NapierBankMessage
 
         private void btn_Click(object sender, RoutedEventArgs e)
         {
-           review.Document.Blocks.Add(new Paragraph(new Run(Reader.readFile("tweets.json"))));
+           review.Document.Blocks.Add(new Paragraph(new Run(Reader.readFile("emails.json"))));
         }
 
         private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
