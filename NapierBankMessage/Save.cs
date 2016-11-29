@@ -12,14 +12,17 @@ namespace NapierBankMessage
     {
         public static void saveJson(object message, string fileName)
         {
+            //use json.net writer
             using (FileStream fs = File.Open(fileName, FileMode.Append))
             using (StreamWriter sw = new StreamWriter(fs))
             using (JsonWriter jw = new JsonTextWriter(sw))
             {
                 jw.Formatting = Formatting.Indented;
                 
+                
                 JsonSerializer serializer = new JsonSerializer();
                 
+                //serialise json for file writing.
                 serializer.Serialize(jw, message);
             }
         }

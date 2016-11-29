@@ -15,13 +15,15 @@ namespace NapierBankMessage
 
             Tweet tweet = new Tweet();
 
+            //split message by lines
             var lines = input.Split(new string[] { Environment.NewLine }, StringSplitOptions.None);
 
+            //save lines to object
             tweet.Header = lines.First();
             tweet.Sender = lines.ElementAt(1);
             tweet.Body = lines.ElementAt(2);
 
-            Save.saveJson(tweet, fileName);
+            Save.saveJson(tweet, fileName); //send object to save function.
         }
     }
 }
