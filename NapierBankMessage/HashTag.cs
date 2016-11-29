@@ -11,10 +11,16 @@ namespace NapierBankMessage
 {
     class HashTag
     {
+
+        
+
+      
+
         internal static void getHashTags(string body)
         {
             //use regex to find hashtags and save them.
             List<string> tags = new List<string>();
+
             var regex = new Regex(@"(?<=#)\w+");
             var matches = regex.Matches(body);
 
@@ -23,9 +29,6 @@ namespace NapierBankMessage
             {
                 tags.Add(m.Value);
             }
-            
-               
-            
             
         }
     }

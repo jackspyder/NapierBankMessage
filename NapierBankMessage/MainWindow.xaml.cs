@@ -90,5 +90,13 @@ namespace NapierBankMessage
         {
             Environment.Exit(0);
         }
+
+        private void ListBox(object sender, EventArgs e)
+        {
+            List<string> trending = new List<string>();
+            
+            listTrend.DataContext = trending;
+
+        }
     }
 }

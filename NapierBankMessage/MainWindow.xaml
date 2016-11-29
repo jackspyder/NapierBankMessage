@@ -32,7 +32,7 @@
 
                     <TextBlock Grid.Row = "0" Grid.Column = "0" Text = "Trending" Margin = "10"  
          HorizontalAlignment = "Left" VerticalAlignment = "Center" Width = "100" />
-                    <ListBox Grid.Row = "1" Grid.Column = "0" Margin = "10" >
+                    <ListBox x:Name="listTrend" Grid.Row = "1" Grid.Column = "0" Margin = "10" >
                         <ListBoxItem Content = "XAML " />
                         <ListBoxItem Content = "WPF " />
                         <ListBoxItem Content = "Silverlight " />
