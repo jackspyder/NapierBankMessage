@@ -20,7 +20,7 @@ namespace NapierBankMessage
             string text = System.IO.File.ReadAllText(@fileName);
 
 
-            
+            return text;
         }
     }
 }

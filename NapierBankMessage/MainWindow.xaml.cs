@@ -62,12 +62,33 @@ namespace NapierBankMessage
 
         private void btn_Click(object sender, RoutedEventArgs e)
         {
-           review.Document.Blocks.Add(new Paragraph(new Run(Reader.readFile("emails.json"))));
+            review.Document.Blocks.Clear();
+            String s = Comb.Text;
+            String load = "emails.json";
+            if (s == "SMS")
+            {
+                load = "sms.json";
+            }
+            else if (s == "Email")
+            {
+                load = "emails.json";
+            }
+            else if (s == "Tweets")
+            {
+                load = "tweets.json";
+            }
+
+            review.Document.Blocks.Add(new Paragraph(new Run(Reader.readFile(load))));
         }
 
         private void ComboBoxItem_Selected(object sender, RoutedEventArgs e)
         {
+           
+        }
 
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Environment.Exit(0);
         }
     }
 }

@@ -22,7 +22,7 @@ namespace NapierBankMessage
                 
                 JsonSerializer serializer = new JsonSerializer();
                 
-                serializer.Serialize(jw, message);
+                serializer.Serialize(jw, incoming);
             }
         }
 
